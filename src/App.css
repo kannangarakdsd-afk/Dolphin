@@ -1,0 +1,23 @@
+/* index.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+}
+
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Forces the app to be at least the height of the screen */
+}
+
+.content {
+  flex: 1; /* This pushes the footer down by taking up all available space */
+}
