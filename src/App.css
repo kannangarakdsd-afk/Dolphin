@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -40,3 +41,28 @@
 .read-the-docs {
   color: #888;
 }
+=======
+/* index.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+}
+
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Forces the app to be at least the height of the screen */
+}
+
+.content {
+  flex: 1; /* This pushes the footer down by taking up all available space */
+}
+>>>>>>> 4def3c8436e1caa1949eac458c5cbe99ab1e0178
