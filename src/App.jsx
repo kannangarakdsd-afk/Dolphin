@@ -8,6 +8,9 @@ import { Route, Routes } from 'react-router-dom'
 import MainLayout from './Layout/MainLayout'
 import HomePage from './Pages/HomePage'
 import GalleryPage from './Pages/GalleryPage'
+import AboutPage from './Pages/AboutPage'
+import ContactUsPage from './Pages/ContactUsPage'
+import FacilitiesPage from './Pages/FacilitiesPage'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,6 +20,9 @@ function App() {
       <Route element={<MainLayout />}>
        <Route path="/" element={<HomePage />} />
        <Route path="/gallery" element={<GalleryPage />} />
+       <Route path="/about" element={<AboutPage />} />
+       <Route path="/contact" element={<ContactUsPage />} />
+       <Route path="/facilities" element={<FacilitiesPage />} />
       </Route>
     </Routes>
   )
