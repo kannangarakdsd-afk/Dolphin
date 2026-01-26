@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-export default function ProjectCard({ title, description, imageSrc, isLoading, onOpen }) {
+export default function ProjectCard({ title, description, imageSrc,  onOpen }) {
   // Skeleton State
+  const[ isLoading, setIsLoading ] = useState(false);
+
   if (isLoading) {
     return (
       <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 animate-pulse">
@@ -19,7 +21,7 @@ export default function ProjectCard({ title, description, imageSrc, isLoading, o
   return (
     <div 
       onClick={onOpen} // Trigger the modal on click
-      className="group cursor-pointer bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 
+      className="group cursor-pointer bg-white rounded-xl max-w-80  shadow-sm overflow-hidden border border-gray-100 
                  transition-all duration-500 ease-out 
                  hover:-translate-y-4 hover:shadow-2xl 
                  animate-in fade-in slide-in-from-bottom-10 duration-700"

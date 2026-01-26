@@ -15,10 +15,8 @@ export default function GalleryPage() {
   const [isLoading, setIsLoading] = useState(true);
 
   // Simulate loading effect for the skeleton check
-  useEffect(() => {
-    const timer = setTimeout(() => setIsLoading(false), 1500);
-    return () => clearTimeout(timer);
-  }, []);
+  
+    
 
   const categories = ['All Projects', 'Gates', 'Fencing', 'Industrial Parts'];
 
@@ -57,14 +55,13 @@ export default function GalleryPage() {
         </div>
 
         {/* Grid Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-2 md:px-0">
           {filteredProjects.map((project) => (
             <ProjectCard 
               key={project.id}
               title={project.title} 
               description={project.description} 
               imageSrc={project.after}
-              isLoading={isLoading}
               onOpen={() => setSelectedProject(project)}
             />
           ))}
