@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import { ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle, Sparkles} from 'lucide-react';
 
 import { QuoteDialog } from '../components/home/QuoteDialog';
 import { ImageWithFallback } from '../components/SafeImage/ImageWithFallback';
 import { HomeButton } from '../components/home/HomeButton';
+import { motion } from 'motion/react';
 
 export default function Home() {
   const [showQuote, setShowQuote] = useState(false);
@@ -21,12 +22,7 @@ export default function Home() {
     {
       title: 'Powder Coating',
       description: 'Durable, high-quality finishes in a wide range of colors and textures.',
-      image: 'https://images.unsplash.com/photo-1673297821205-e0575bbc2ab7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3dkZXIlMjBjb2F0aW5nJTIwaW5kdXN0cmlhbHxlbnwxfHx8fDE3NjczODAzMjJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
-    },
-    {
-      title: 'Gates & Fencing',
-      description: 'Custom-designed gates and fencing solutions for residential and commercial properties.',
-      image: 'https://images.unsplash.com/photo-1692451735064-106d9078556b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZXRhbCUyMGdhdGUlMjBmZW5jZXxlbnwxfHx8fDE3Njc0MTIxMzN8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://images.unsplash.com/photo-1673297821205-e0575bbc2ab7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwb3dkZXIlMjBjb2F0aW5nJTIwaW5kdXN0cmlhbHxlbnwxfHx8fDE3Njc0MTIxMzN8MA&ixlib=rb-4.1.0&q=80&w=1080',
     },
     {
       title: 'Iron Works',
@@ -37,6 +33,16 @@ export default function Home() {
 
   return (
     <div>
+      {/* Admin Login Button - Hidden in corner */}
+      <div className="fixed bottom-4 left-4 z-50">
+        <a
+          href="/admin"
+          className="opacity-10 hover:opacity-100 transition-opacity duration-300"
+        >
+          <div className="h-3 w-3 rounded-full bg-gray-400" />
+        </a>
+      </div>
+
       {/* Hero Section */}
       <section
         className="relative h-[600px] flex items-center justify-center bg-cover bg-center"
@@ -51,13 +57,20 @@ export default function Home() {
           <p className="text-xl md:text-2xl mb-8 text-gray-200">
             Premium Powder Coating & Iron Works Solutions
           </p>
-          <HomeButton
-            size="lg"
-            className="bg-[#007BFF] hover:bg-blue-600 text-white"
-            onClick={() => setShowQuote(true)}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
-          </HomeButton>
+            <HomeButton
+              size="lg"
+              className="bg-gradient-to-r from-[#007BFF] to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-2xl transition-all duration-300 px-8 py-6 text-lg group"
+              onClick={() => setShowQuote(true)}
+            >
+              <Sparkles className="mr-2 h-6 w-6 animate-pulse" />
+              Request a Quote 
+              <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-2 transition-transform" />
+            </HomeButton>
+          </motion.div>
         </div>
       </section>
 
@@ -88,7 +101,7 @@ export default function Home() {
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl text-center mb-12">Our Services</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="h-48 overflow-hidden">
@@ -140,13 +153,20 @@ export default function Home() {
           <p className="text-lg text-gray-600 mb-8">
             Get in touch with us today for a free consultation and quote.
           </p>
-          <HomeButton
-            size="lg"
-            className="bg-[#007BFF] hover:bg-blue-600 text-white"
-            onClick={() => setShowQuote(true)}
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Request a Quote <ArrowRight className="ml-2 h-5 w-5" />
-          </HomeButton>
+            <HomeButton
+              size="lg"
+              className="bg-gradient-to-r from-[#007BFF] to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg hover:shadow-2xl transition-all duration-300 px-8 py-6 text-lg group"
+              onClick={() => setShowQuote(true)}
+            >
+              <Sparkles className="mr-2 h-6 w-6 animate-pulse" />
+              Request a Quote 
+              <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-2 transition-transform" />
+            </HomeButton>
+          </motion.div>
         </div>
       </section>
 
