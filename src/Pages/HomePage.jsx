@@ -33,16 +33,7 @@ export default function Home() {
 
   return (
     <div>
-      {/* Admin Login Button - Hidden in corner */}
-      <div className="fixed bottom-4 left-4 z-50">
-        <a
-          href="/admin"
-          className="opacity-10 hover:opacity-100 transition-opacity duration-300"
-        >
-          <div className="h-3 w-3 rounded-full bg-gray-400" />
-        </a>
-      </div>
-
+      
       {/* Hero Section */}
       <section
         className="relative h-[600px] flex items-center justify-center bg-cover bg-center"
