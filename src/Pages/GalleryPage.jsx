@@ -4,9 +4,9 @@ import ProjectModal from '../components/gallery/ProjectModal'
 
 // Sample Data Array
 const projectsData = [
-  { id: 1, title: "Modern Gate Installation", category: "Gates", description: "Custom designed modern gate with powder coating finish", before: "https://via.placeholder.com/400x300", after: "https://via.placeholder.com/400x300" },
-  { id: 2, title: "Industrial Fencing", category: "Fencing", description: "Heavy-duty industrial fencing with anti-corrosion coating", before: "https://via.placeholder.com/400x300", after: "https://via.placeholder.com/400x300" },
-  { id: 3, title: "Industrial Parts", category: "Industrial Parts", description: "Powder coated industrial components for machinery", before: "https://via.placeholder.com/400x300", after: "https://via.placeholder.com/400x300" },
+  { id: 1, title: "Modern Gate Installation", category: "Iron-works", description: "Custom designed modern gate with powder coating finish", before: "https://via.placeholder.com/400x300", after: "https://via.placeholder.com/400x300" },
+  { id: 2, title: "Industrial Fencing", category: "Powder-coating", description: "Heavy-duty industrial fencing with anti-corrosion coating", before: "https://via.placeholder.com/400x300", after: "https://via.placeholder.com/400x300" },
+  { id: 3, title: "Industrial Parts", category: "Iron-works", description: "Powder coated industrial components for machinery", before: "https://via.placeholder.com/400x300", after: "https://via.placeholder.com/400x300" },
 ];
 
 export default function GalleryPage() {
@@ -18,7 +18,7 @@ export default function GalleryPage() {
   
     
 
-  const categories = ['All Projects', 'Gates', 'Fencing', 'Industrial Parts'];
+  const categories = ['All Projects', 'Powder-coating', 'Iron-works'];
 
   const filteredProjects = filter === 'All Projects' 
     ? projectsData 

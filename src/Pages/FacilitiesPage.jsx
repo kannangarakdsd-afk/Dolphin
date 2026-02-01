@@ -2,6 +2,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/faciliti
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/facilities/accordion';
 import { Check } from 'lucide-react';
 import { ImageWithFallback } from '../components/SafeImage/ImageWithFallback';
+import { AIImageGenerator } from '../components/facilities/AIImageGenerator';
 
 export default function FacilitiesPage() {
   const powderCoatingColors = [
@@ -134,7 +135,21 @@ export default function FacilitiesPage() {
                 </Accordion>
               </div>
 
-            
+              {/* Durability Info */}
+              <div className="bg-[#007BFF] text-white p-8 rounded-lg">
+                <h3 className="text-2xl mb-4">Durability Guarantee</h3>
+                <p className="text-blue-100 mb-4">
+                  Our powder coating process ensures long-lasting protection for your metal products.
+                  With proper maintenance, powder coated surfaces can last for decades without
+                  significant deterioration.
+                </p>
+                <ul className="space-y-2 text-blue-100">
+                  <li>• Weather resistant up to 10+ years outdoors</li>
+                  <li>• Chemical and solvent resistant</li>
+                  <li>• Impact and abrasion resistant</li>
+                  <li>• Temperature resistant (-40°C to 80°C)</li>
+                </ul>
+              </div>
             </TabsContent>
 
             <TabsContent value="iron-works" className="space-y-8">
@@ -224,6 +239,21 @@ export default function FacilitiesPage() {
               </div>
             </TabsContent>
           </Tabs>
+        </div>
+      </section>
+
+      {/* AI Image Generator Section */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl mb-4">Visualize Your Iron Works Project</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Use our AI-powered 3D image generator to visualize your custom iron works projects. 
+              Simply provide the dimensions and description of your desired product such as tables, 
+              chairs, gates, or any other iron work, and see a realistic preview before ordering.
+            </p>
+          </div>
+          <AIImageGenerator />
         </div>
       </section>
     </div>

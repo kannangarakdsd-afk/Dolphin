@@ -14,7 +14,7 @@ const Header= () => {
   ];
 
   return (
-    <nav className="fixed w-full z-50 bg-white/10 backdrop-blur-lg border-b border-white/20 shadow-sm">
+    <nav className="fixed w-full z-50 bg-white border-b border-slate-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           
@@ -67,7 +67,7 @@ const Header= () => {
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="md:hidden bg-white/95 backdrop-blur-xl border-b border-slate-200">
+        <div className="md:hidden bg-white border-b border-slate-200">
           <div className="px-4 pt-2 pb-6 space-y-2">
             {navLinks.map((link) => (
               <NavLink
